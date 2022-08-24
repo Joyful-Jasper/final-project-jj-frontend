@@ -11,7 +11,7 @@ import Home from './components/home/Home';
 import Categories from './components/categories/Categories';
 // customers
 import LoginUser from './components/customer/login/LoginUser';
-import RegisterUser from './components/customer/register/RegisterUser';
+// import RegisterUser from './components/customer/register/RegisterUser';
 import ProfileUser from './components/customer/profile/ProfileUser';
 import Cart from './components/customer/carts/Cart';
 import Transactions from './components/customer/transactions/Transactions';
@@ -20,13 +20,14 @@ import TransactionStatus from './components/customer/transactions/TransactionSta
 import OrdersHistory from './components/customer/history/OrdersHistory';
 // vendors
 import LoginVendor from './components/vendor/login/LoginVendor';
-import RegisterVendor from './components/vendor/register/RegisterVendor';
+// import RegisterVendor from './components/vendor/register/RegisterVendor';
 import ProfileVendor from './components/vendor/profile/ProfileVendor';
 import DashboardVendor from './components/vendor/dashboard/DashboardVendor';
 import CollectionsVendor from './components/vendor/collections/CollectionsVendor';
 import DesignUpload from './components/vendor/designs/DesignUpload';
 import SalesReport from './components/vendor/sales/SalesReport';
-
+// baru
+import Detail from './components/customer/detail-product/Detail';
 function App() {
   return (
     <Router>
@@ -42,6 +43,7 @@ function App() {
             <Route path='/' element={<Home />} />
             <Route path='categories' element={<Categories />} />
             {/* Udin */}
+            <Route path='detail' element={<Detail />} />
 
 
             {/* customers */}
@@ -53,14 +55,14 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route
+            {/* <Route
               path='register'
               element={
                 <ProtectedRoute loginOnly={false}>
                   <RegisterUser />
                 </ProtectedRoute>
               }
-            />
+            /> */}
             <Route
               path='profile'
               element={
@@ -119,14 +121,14 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route
+            {/* <Route
               path='vendor-register'
               element={
                 <ProtectedRoute loginOnly={false}>
                   <RegisterVendor />
                 </ProtectedRoute>
               }
-            />
+            /> */}
             <Route
               path='vendor-profile'
               element={
