@@ -1,15 +1,16 @@
-import './App.css';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import ProtectedRoute from './components/commons/ProtectedRoute';
-import Navbar from './components/navbar/Navbar';
-import Footer from './components/footer/Footer';
-import NotFoundImg from './assets/404.svg';
-import About from './components/about/About';
-import Description from './components/about/Description';
-import Services from './components/about/Services';
-import Home from './components/home/Home';
-import Categories from './components/categories/Categories';
+import "./App.css";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import ProtectedRoute from "./components/commons/ProtectedRoute";
+import Navbar from "./components/navbar/Navbar";
+import Footer from "./components/footer/Footer";
+import NotFoundImg from "./assets/404.svg";
+import About from "./components/about/About";
+import Description from "./components/about/Description";
+import Services from "./components/about/Services";
+import Home from "./components/home/Home";
+import Categories from "./components/categories/Categories";
 // customers
+
 import LoginUser from './components/customer/login/LoginUser';
 // import RegisterUser from './components/customer/register/RegisterUser';
 import ProfileUser from './components/customer/profile/ProfileUser';
@@ -28,33 +29,37 @@ import DesignUpload from './components/vendor/designs/DesignUpload';
 import SalesReport from './components/vendor/sales/SalesReport';
 // baru
 import Detail from './components/customer/detail-product/Detail';
+
 function App() {
   return (
     <Router>
       <Navbar />
-      <div className='App-container'>
-        <div className='App-content'>
+      <div className="App-container">
+        <div className="App-content">
           <Routes>
-            <Route path='*' element={<NotFound />} />
-            <Route path='about' element={<About />}>
-              <Route path='description' element={<Description />} />
-              <Route path='services' element={<Services />} />
+            <Route path="*" element={<NotFound />} />
+            <Route path="about" element={<About />}>
+              <Route path="description" element={<Description />} />
+              <Route path="services" element={<Services />} />
             </Route>
+
             <Route path='/' element={<Home />} />
             <Route path='categories' element={<Categories />} />
             {/* Udin */}
             <Route path='detail' element={<Detail />} />
 
 
+
             {/* customers */}
             <Route
-              path='login'
+              path="login"
               element={
                 <ProtectedRoute loginOnly={false}>
                   <LoginUser />
                 </ProtectedRoute>
               }
             />
+
             {/* <Route
               path='register'
               element={
@@ -64,7 +69,7 @@ function App() {
               }
             /> */}
             <Route
-              path='profile'
+              path="profile"
               element={
                 <ProtectedRoute>
                   <ProfileUser />
@@ -72,7 +77,7 @@ function App() {
               }
             />
             <Route
-              path='confirm-transaction'
+              path="confirm-transaction"
               element={
                 <ProtectedRoute>
                   <ConfirmTransaction />
@@ -80,7 +85,7 @@ function App() {
               }
             />
             <Route
-              path='carts'
+              path="carts"
               element={
                 <ProtectedRoute>
                   <Cart />
@@ -88,7 +93,7 @@ function App() {
               }
             />
             <Route
-              path='transactions'
+              path="transactions"
               element={
                 <ProtectedRoute>
                   <Transactions />
@@ -96,7 +101,7 @@ function App() {
               }
             />
             <Route
-              path='transaction-status'
+              path="transaction-status"
               element={
                 <ProtectedRoute>
                   <TransactionStatus />
@@ -104,7 +109,7 @@ function App() {
               }
             />
             <Route
-              path='orders-history'
+              path="orders-history"
               element={
                 <ProtectedRoute>
                   <OrdersHistory />
@@ -114,15 +119,17 @@ function App() {
 
             {/* vendors */}
             <Route
-              path='vendor-login'
+              path="vendor-login"
               element={
                 <ProtectedRoute loginOnly={false}>
                   <LoginVendor />
                 </ProtectedRoute>
               }
             />
+
             {/* <Route
               path='vendor-register'
+
               element={
                 <ProtectedRoute loginOnly={false}>
                   <RegisterVendor />
@@ -130,7 +137,7 @@ function App() {
               }
             /> */}
             <Route
-              path='vendor-profile'
+              path="vendor-profile"
               element={
                 <ProtectedRoute vendorOnly={true}>
                   <ProfileVendor />
@@ -138,7 +145,7 @@ function App() {
               }
             />
             <Route
-              path='vendor-dashboard'
+              path="vendor-dashboard"
               element={
                 <ProtectedRoute vendorOnly={true}>
                   <DashboardVendor />
@@ -146,7 +153,7 @@ function App() {
               }
             />
             <Route
-              path='vendor-collections'
+              path="vendor-collections"
               element={
                 <ProtectedRoute vendorOnly={true}>
                   <CollectionsVendor />
@@ -154,7 +161,7 @@ function App() {
               }
             />
             <Route
-              path='vendor-design-upload'
+              path="vendor-design-upload"
               element={
                 <ProtectedRoute vendorOnly={true}>
                   <DesignUpload />
@@ -162,7 +169,7 @@ function App() {
               }
             />
             <Route
-              path='vendor-sales'
+              path="vendor-sales"
               element={
                 <ProtectedRoute vendorOnly={true}>
                   <SalesReport />
@@ -172,7 +179,7 @@ function App() {
           </Routes>
         </div>
       </div>
-      <Footer className='App-footer' />
+      <Footer className="App-footer" />
     </Router>
   );
 }
@@ -181,17 +188,17 @@ function NotFound() {
   return (
     <div
       style={{
-        display: 'flex',
+        display: "flex",
         margin: 128,
-        justifyContent: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
+        justifyContent: "center",
+        alignItems: "center",
+        flexDirection: "column",
       }}
     >
       <h2>Woah! Halaman tidak ditemukan...</h2>
       <br />
       <br />
-      <img src={NotFoundImg} alt='404' width='320px' />
+      <img src={NotFoundImg} alt="404" width="320px" />
     </div>
   );
 }
