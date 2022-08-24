@@ -39,8 +39,22 @@ function App() {
               <Route path='description' element={<Description />} />
               <Route path='services' element={<Services />} />
             </Route>
-            <Route path='/' element={<Home />} />
-            <Route path='categories' element={<Categories />} />
+            <Route
+              path='/'
+              element={
+                <ProtectedRoute userOnly={true}>
+                  <Home />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path='categories'
+              element={
+                <ProtectedRoute userOnly={true}>
+                  <Categories />
+                </ProtectedRoute>
+              }
+            />
 
             {/* customers */}
             <Route
@@ -167,8 +181,8 @@ function App() {
             />
           </Routes>
         </div>
-        <Footer className='App-footer'/>
       </div>
+      <Footer className='App-footer' />
     </Router>
   );
 }

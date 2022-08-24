@@ -4,7 +4,6 @@ import { Button, Form } from 'react-bootstrap';
 import { UsersHelper } from '../../../helpers';
 import Alert from '../../commons/Alert';
 import Toast from './../../commons/Toast';
-
 const RegisterCustomer = () => {
   const navigate = useNavigate();
   const [vendorForm, setVendorForm] = useState({
@@ -27,7 +26,7 @@ const RegisterCustomer = () => {
   const handleCloseAlert = () => {
     setShowAlert(false);
     if (!isError) {
-      navigate('/vendor-login');
+      navigate('/vendor-login')
     }
   };
   const handleShowAlert = () => setShowAlert(true);
@@ -49,7 +48,10 @@ const RegisterCustomer = () => {
     if (
       vendorForm.email !== '' &&
       vendorForm.firstName !== '' &&
-      vendorForm.password !== ''
+      vendorForm.password !== '' &&
+      vendorForm.studioName !== '' &&
+      vendorForm.linkedIn !== '' &&
+      vendorForm.bgExp !== ''
     ) {
       if (Object.keys(formError).length === 0) {
         setIsLoading(true);
@@ -86,7 +88,7 @@ const RegisterCustomer = () => {
         handleClose={handleCloseAlert}
       />
       <Toast show={isLoading} loading={isLoading} />
-      <h1>Register account</h1>
+      <h1>Register Your Studio</h1>
       <Form className='mt-5'>
         <div className='text-start'>
           <hr />
@@ -167,37 +169,37 @@ const RegisterCustomer = () => {
               checked={showPass}
             />
           </Form.Group>
+
+          <Form.Group className='mb-3' controlId='formBgExp'>
+            <Form.Label>
+              <h4>Background & Experience</h4>
+            </Form.Label>
+            <Form.Control
+              as='textarea'
+              rows={4}
+              placeholder='Tell us about your background & experience'
+              name='bgExp'
+              onChange={(ev) => handleChange(ev)}
+              onKeyPress={(ev) => handleKeyPress(ev)}
+            />
+          </Form.Group>
+          <p className='text-danger'>{formError.bgExp}</p>
+
+          <Form.Group className='mb-3' controlId='formLinkedIn'>
+            <Form.Label>
+              <h4>LinkedIn</h4>
+            </Form.Label>
+            <Form.Control
+              type='text'
+              placeholder='Enter LinkedIn'
+              name='linkedIn'
+              onChange={(ev) => handleChange(ev)}
+              onKeyPress={(ev) => handleKeyPress(ev)}
+            />
+          </Form.Group>
+          <p className='text-danger'>{formError.linkedIn}</p>
           <hr />
         </div>
-
-        <Form.Group className='mb-3' controlId='formBgExp'>
-          <Form.Label>
-            <h4>Background & Experience</h4>
-          </Form.Label>
-          <Form.Control
-            as='textarea'
-            rows={4}
-            placeholder='Tell us about your background & experience'
-            name='bgExp'
-            onChange={(ev) => handleChange(ev)}
-            onKeyPress={(ev) => handleKeyPress(ev)}
-          />
-        </Form.Group>
-        <p className='text-danger'>{formError.bgExp}</p>
-
-        <Form.Group className='mb-3' controlId='formLinkedIn'>
-          <Form.Label>
-            <h4>LinkedIn</h4>
-          </Form.Label>
-          <Form.Control
-            type='text'
-            placeholder='Enter LinkedIn'
-            name='linkedIn'
-            onChange={(ev) => handleChange(ev)}
-            onKeyPress={(ev) => handleKeyPress(ev)}
-          />
-        </Form.Group>
-        <p className='text-danger'>{formError.linkedIn}</p>
 
         <div className='text-start'>
           <p>
