@@ -9,12 +9,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 // context
 import ContextProvidersHelper from './contexts/ContextProvidersHelper';
-import AuthContextProvider from './contexts/AuthContext';
+import { AuthContextProvider, UserContextProvider } from './contexts/Providers';
 
 const root = createRoot(document.getElementById('root'));
 root.render(
   <StrictMode>
-    <ContextProvidersHelper providers={[<AuthContextProvider />]}>
+    <ContextProvidersHelper
+      providers={[<AuthContextProvider />, <UserContextProvider />]}
+    >
       <App />
     </ContextProvidersHelper>
   </StrictMode>,

@@ -1,9 +1,14 @@
-import React from 'react'
+import React from 'react';
+import { useAuth, useUser } from '../../contexts/Contexts';
 
 const Home = () => {
-  return (
-    <div>Home</div>
-  )
-}
+  const { auth } = useAuth();
+  const { user } = useUser();
 
-export default Home
+  console.log('auth', auth);
+  console.log('user', user);
+
+  return <div>Home</div>;
+};
+
+export default Home;
