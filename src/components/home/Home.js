@@ -7,8 +7,8 @@ import "./home.css"
 const Home = () => {
   return (
     <div>
-
-      {/* <div className="carousel-inner" style={{ borderRadius: 20, height: 500, width: 1350 }}>
+      {/* 
+      <div className="carousel-inner" style={{ borderRadius: 20, height: 500, width: 1350 }}>
               <div className="carousel-item active" data-bs-interval="7000">
                 <img src={gambar} alt="..." />
                 <div className="carousel-caption " style={{ position: "absolute", top: "20%", left: "15%", margin: "auto" }}>
@@ -22,6 +22,19 @@ const Home = () => {
               </div>
             </div> */}
 
+      <div className=" banner">
+        <div class="container-fluid overlay  ">
+          <div class="container text-center">
+            <h4 class="display-6 fw-bold">Selamat Datang di Website Kami</h4>
+            <h3 class="display-1 fw-bold">Hai! Halo!</h3>
+            <a href="#layanan">
+              <button type="button" class="btn btn-secondary btn-lg">
+                Cek Layanan
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
 
 
       <section className="hero-banner bg-light py-5">

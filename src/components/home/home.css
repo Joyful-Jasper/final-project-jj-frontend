@@ -34,7 +34,7 @@
     width: 100%;
 }
 
-
+/* 3D */
 section.quote {
     background: url("./../../assets/rumahdesain.jpg") no-repeat;
     background-attachment: fixed;
@@ -53,6 +53,21 @@ section.quote .layar-dalam p {
     background-color: rgba(0, 0, 0, 0.546);
     /* background: url("asset/quote-icon.png") no-repeat; */
     padding: 10px;
+}
+
+.overlay {
+
+    background-color: rgba(0, 0, 0, 0.546);
+    /* background: url("asset/quote-icon.png") no-repeat; */
+    background-size: cover;
+    padding-top: 20%;
+    padding-bottom: 20%;
+}
+
+.banner {
+    background: url("../../assets/rumahdesain.jpg") no-repeat center center;
+    background-size: cover;
+    color: #fff;
 }
 
 @media only screen and (max-width: 568px) {
