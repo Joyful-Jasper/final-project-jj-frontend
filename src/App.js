@@ -83,14 +83,7 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route
-              path="transactions"
-              element={
-                <ProtectedRoute>
-                  <Transactions />
-                </ProtectedRoute>
-              }
-            />
+            <Route path="/transactions" element={<Transactions />} />
             <Route
               path="transaction-status"
               element={

@@ -3,8 +3,13 @@ import gambar from "../../assets/background2.svg";
 import gambarrumah from "../../assets/desain1.svg";
 import gambar1 from "../../assets/desain2.svg";
 import gambar2 from "../../assets/desain.svg";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  const navigate = useNavigate();
+  const checkout = () => {
+    console.log("bandung");
+  };
   return (
     <div className="countainer">
       <div className="container-fluid" style={{ backgroundColor: "#ECECEC" }}>
@@ -32,18 +37,29 @@ const Home = () => {
                 <h4 className="col justify-content-center d-flex mx-auto my-5" style={{ color: "#ECECEC" }}>
                   Nama Product
                 </h4>
+                <button onClick={checkout} className="justify-content-center d-flex mx-auto px-3 my-5" style={{ backgroundColor: "#C1A57B", border: "none", padding: "10px", borderRadius: "5px" }}>
+                  Beli
+                </button>
+                my-
               </div>
+
               <div className="col mx-2 my-2" style={{ backgroundColor: "#30475E" }}>
                 <img src={gambar1} height={200} className="mt-3 justify-content-center d-flex mx-auto" />
                 <h4 className="col justify-content-center d-flex mx-auto my-5" style={{ color: "#ECECEC" }}>
                   Nama Product
                 </h4>
+                <button onClick={checkout} className="justify-content-center d-flex mx-auto px-3 my-5" style={{ backgroundColor: "#C1A57B", border: "none", padding: "10px", borderRadius: "5px" }}>
+                  Beli
+                </button>
               </div>
               <div className="col mx-2 my-2" style={{ backgroundColor: "#30475E" }}>
                 <img src={gambar2} height={200} className="mt-3 justify-content-center d-flex mx-auto" />
                 <h4 className="col justify-content-center d-flex mx-auto my-5" style={{ color: "#ECECEC" }}>
                   Nama Product
                 </h4>
+                <button onClick={checkout} className="justify-content-center d-flex mx-auto px-3 my-5" style={{ backgroundColor: "#C1A57B", border: "none", padding: "10px", borderRadius: "5px" }}>
+                  Beli
+                </button>
               </div>
             </div>
           </div>
