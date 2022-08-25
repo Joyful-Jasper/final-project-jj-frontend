@@ -10,22 +10,25 @@ import Services from "./components/about/Services";
 import Home from "./components/home/Home";
 import Categories from "./components/categories/Categories";
 // customers
-import LoginUser from "./components/customer/login/LoginUser";
-import RegisterUser from "./components/customer/register/RegisterUser";
-import ProfileUser from "./components/customer/profile/ProfileUser";
-import Cart from "./components/customer/carts/Cart";
-import Transactions from "./components/customer/transactions/Transactions";
-import ConfirmTransaction from "./components/customer/transactions/ConfirmTransaction";
-import TransactionStatus from "./components/customer/transactions/TransactionStatus";
-import OrdersHistory from "./components/customer/history/OrdersHistory";
+
+import LoginUser from './components/customer/login/LoginUser';
+// import RegisterUser from './components/customer/register/RegisterUser';
+import ProfileUser from './components/customer/profile/ProfileUser';
+import Cart from './components/customer/carts/Cart';
+import Transactions from './components/customer/transactions/Transactions';
+import ConfirmTransaction from './components/customer/transactions/ConfirmTransaction';
+import TransactionStatus from './components/customer/transactions/TransactionStatus';
+import OrdersHistory from './components/customer/history/OrdersHistory';
 // vendors
-import LoginVendor from "./components/vendor/login/LoginVendor";
-import RegisterVendor from "./components/vendor/register/RegisterVendor";
-import ProfileVendor from "./components/vendor/profile/ProfileVendor";
-import DashboardVendor from "./components/vendor/dashboard/DashboardVendor";
-import CollectionsVendor from "./components/vendor/collections/CollectionsVendor";
-import DesignUpload from "./components/vendor/designs/DesignUpload";
-import SalesReport from "./components/vendor/sales/SalesReport";
+import LoginVendor from './components/vendor/login/LoginVendor';
+// import RegisterVendor from './components/vendor/register/RegisterVendor';
+import ProfileVendor from './components/vendor/profile/ProfileVendor';
+import DashboardVendor from './components/vendor/dashboard/DashboardVendor';
+import CollectionsVendor from './components/vendor/collections/CollectionsVendor';
+import DesignUpload from './components/vendor/designs/DesignUpload';
+import SalesReport from './components/vendor/sales/SalesReport';
+// baru
+import Detail from './components/customer/detail-product/Detail';
 
 function App() {
   return (
@@ -39,8 +42,13 @@ function App() {
               <Route path="description" element={<Description />} />
               <Route path="services" element={<Services />} />
             </Route>
-            <Route path="/" element={<Home />} />
-            <Route path="categories" element={<Categories />} />
+
+            <Route path='/' element={<Home />} />
+            <Route path='categories' element={<Categories />} />
+            {/* Udin */}
+            <Route path='detail' element={<Detail />} />
+
+
 
             {/* customers */}
             <Route
@@ -51,14 +59,15 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route
-              path="register"
+
+            {/* <Route
+              path='register'
               element={
                 <ProtectedRoute loginOnly={false}>
                   <RegisterUser />
                 </ProtectedRoute>
               }
-            />
+            /> */}
             <Route
               path="profile"
               element={
@@ -110,14 +119,16 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            <Route
-              path="vendor-register"
+
+            {/* <Route
+              path='vendor-register'
+
               element={
                 <ProtectedRoute loginOnly={false}>
                   <RegisterVendor />
                 </ProtectedRoute>
               }
-            />
+            /> */}
             <Route
               path="vendor-profile"
               element={
