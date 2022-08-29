@@ -15,10 +15,10 @@ import "./nav.css";
 const Navbar = () => {
 	const navigate = useNavigate();
 	return (
-		<Menu collapseOnSelect expand="lg" bg="dark" variant="dark" className='min-vw-100'>
+		<Menu collapseOnSelect expand="lg" bg="light" variant="light" className='min-vw-100'>
 			<Container>
 				<Menu.Brand className="nav-brand" onClick={() => navigate("/")}>
-					Bangunin
+					<h1>AABI</h1>
 				</Menu.Brand>
 				<Menu.Toggle aria-controls="responsive-navbar-nav" />
 				<Menu.Collapse id="responsive-navbar-nav">
