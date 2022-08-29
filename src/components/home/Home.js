@@ -44,7 +44,75 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <div class="container-fluid pt-5 pb-5 bg-light">
+        <div class="container text-center">
+          <h2 class="display-3 fw-bold" >Populer Projects</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti,
+            dolorum quasi? Neque consectetur odio placeat inventore perferendis
+            quibusdam omnis deleniti.
+          </p>
+          <div class="row pt-4 gx-4 gy-4">
+            <div class="col-md-4">
+              <div class="card crop-img">
+                <img
+                  src={gambarrumah}
+                  class="card-img-top"
+                  width="200"
+                  height="200"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Lorem, ipsum.</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
+                    odit atque nam animi dolores itaque.
+                  </p>
+                </div>
+              </div>
+            </div>
 
+            <div class="col-md-4">
+              <div class="card crop-img">
+                <img
+                  src={gambarrumah}
+                  class="card-img-top"
+                  width="200"
+                  height="200"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Lorem, ipsum.</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
+                    odit atque nam animi dolores itaque.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card crop-img">
+                <img
+                  src={gambarrumah}
+                  class="card-img-top"
+                  width="200"
+                  height="200"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Lorem, ipsum.</h5>
+                  <p class="card-text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis
+                    odit atque nam animi dolores itaque.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section className="quote">
+        <div className="layar-dalam">
+          <p>Selamat datang ke Website Kita Dekor</p>
+        </div>
+      </section>
       <section className="hero-banner bg-light py-5">
         <div className="container">
           <div className="row row align-items-center">
@@ -65,11 +133,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <section className="quote">
-        <div className="layar-dalam">
-          <p>Selamat datang ke Website Kita Dekor</p>
-        </div>
-      </section>
+
 
 
       {/* Card */}
