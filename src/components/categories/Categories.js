@@ -19,20 +19,18 @@ const Categories = () => {
 	return (
 		<div className="mt-5">
 			<div className="container">
-				<div className="row d-flex justify-content-around align-items-center">
+				<div className="d-grid d-sm-flex gap-2 gap-sm-4 flex-sm-row justify-content-sm-center align-items-center">
 					{buttons &&
 						buttons.map((type, index) => (
-							<div key={index} className="col-md-2 mb-3">
-								<button
-									type="button"
-									className="btn btn-secondary"
-									key={index}
-									value={type.value}
-									onClick={handleCategories}
-								>
-									{type.name}
-								</button>
-							</div>
+							<button
+								type="button"
+								className="btn btn-secondary"
+								key={index}
+								value={type.value}
+								onClick={handleCategories}
+							>
+								{type.name}
+							</button>
 						))}
 				</div>
 				<div className="row text-center pt-4 gx-4 gy-4 p-4">

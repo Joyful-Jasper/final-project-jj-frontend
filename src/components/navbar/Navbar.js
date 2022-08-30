@@ -1,15 +1,8 @@
 import React from "react";
-
-// Bootstrap
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import { default as Menu } from "react-bootstrap/Navbar";
-// import NavDropdown from "react-bootstrap/NavDropdown";
-
-// React Router
 import { useNavigate } from "react-router";
-
-// External CSS
 import "./nav.css";
 
 const Navbar = () => {
