@@ -19,22 +19,19 @@ const Categories = () => {
 	return (
 		<div className="mt-5">
 			<div className="container">
-				<div className="row d-flex justify-content-around align-items-center">
-					{buttons &&
-						buttons.map((type, index) => (
-							<div key={index} className="col-md-2 mb-3">
-								<button
-									type="button"
-									className="btn btn-secondary"
-									key={index}
-									value={type.value}
-									onClick={handleCategories}
-								>
-									{type.name}
-								</button>
-							</div>
-						))}
-				</div>
+				{/* baru */}
+				{buttons &&
+					buttons.map((type, index) => (
+						<div key={index} class="btn-group" role="group" aria-label="Basic example">
+							<button type="button"
+								className="btn btn-secondary"
+								key={index}
+								value={type.value}
+								onClick={handleCategories}>{type.name}</button>
+
+						</div>
+					))}
+				{/* akhir baru */}
 				<div className="row text-center pt-4 gx-4 gy-4 p-4">
 					{filtredCategories &&
 						filtredCategories.map((type) => (

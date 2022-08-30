@@ -27,6 +27,34 @@ export const Categories = [
 		registro: 63,
 		CP: 350,
 	},
+	{
+		id: 5,
+		nome: "Minimalis Home",
+		tipo: "minimalis",
+		registro: 133,
+		CP: 300,
+	},
+	{
+		id: 6,
+		nome: "Modern Home",
+		tipo: "modern",
+		registro: 123,
+		CP: 500,
+	},
+	{
+		id: 7,
+		nome: "Kontemporer",
+		tipo: "kontemporer",
+		registro: 123,
+		CP: 500,
+	},
+	{
+		id: 8,
+		nome: "Mediteranian",
+		tipo: "mediteranian",
+		registro: 63,
+		CP: 350,
+	},
 ];
 
 export const buttons = [

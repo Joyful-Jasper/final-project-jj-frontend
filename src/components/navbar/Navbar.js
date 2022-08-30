@@ -1,5 +1,6 @@
 import React from "react";
 
+
 // Bootstrap
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
@@ -10,6 +11,7 @@ import { default as Menu } from "react-bootstrap/Navbar";
 import { useNavigate } from "react-router";
 
 // External CSS
+
 import "./nav.css";
 
 const Navbar = () => {
@@ -19,6 +21,7 @@ const Navbar = () => {
 			<Container>
 				<Menu.Brand className="nav-brand" onClick={() => navigate("/")}>
 					<h1>AABI</h1>
+
 				</Menu.Brand>
 				<Menu.Toggle aria-controls="responsive-navbar-nav" />
 				<Menu.Collapse id="responsive-navbar-nav">

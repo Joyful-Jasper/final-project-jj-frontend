@@ -4,13 +4,13 @@ const Detail = () => {
   return (
     <div>
       <div className='container'>
-        <div class='row text-center mb-3'>
+        <div class='row text-center mb-3 pt-4'>
           <div class='col'>
-            <h1>HOME/RESIDENTIAL/HOUSES/NAMA-DESAIN</h1>
+            <h1>NAMA-DESAIN</h1>
           </div>
         </div>
-        <div className='row'>
-          <div className='col-6'>
+        <div className='row p-4'>
+          <div className='col-md-6'>
             <Carousel>
               <Carousel.Item>
                 <img
@@ -56,10 +56,10 @@ const Detail = () => {
               </Carousel.Item>
             </Carousel>
           </div>
-          <div className='col-6'>
+          <div className='col-md-6'>
             <h2 className='text-center'>Nama Desain</h2>
-            <h3 className='/'>HARGA</h3>
-            <h3>Description</h3>
+            <h3 className='text-start'>HARGA</h3>
+            <h3 className="text-start">Description</h3>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text

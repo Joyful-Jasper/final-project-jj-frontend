@@ -122,6 +122,14 @@ function App() {
                 </ProtectedRoute>
               }
             />
+            <Route
+              path='detail'
+              element={
+                <ProtectedRoute userOnly={true}>
+                  <Detail />
+                </ProtectedRoute>
+              }
+            />
 
             {/* vendors */}
             <Route

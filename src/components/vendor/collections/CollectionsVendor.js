@@ -1,8 +1,10 @@
+
 import { useState, useEffect } from 'react';
 import { useAuth } from './../../../contexts/Contexts';
 import { CollectionsHelper } from './../../../helpers';
 import Layout from '../layout/Layout';
 import Collection from './Collection';
+
 
 const CollectionsVendor = () => {
   const { auth } = useAuth();
@@ -43,3 +45,4 @@ const CollectionsVendor = () => {
 };
 
 export default CollectionsVendor;
+
