@@ -20,7 +20,7 @@ const Navbar = () => {
 		<Menu collapseOnSelect expand="lg" bg="light" variant="light" className='min-vw-100'>
 			<Container>
 				<Menu.Brand className="nav-brand" onClick={() => navigate("/")}>
-					<h1>AABI</h1>
+					<h1>Genius Architect</h1>
 
 				</Menu.Brand>
 				<Menu.Toggle aria-controls="responsive-navbar-nav" />
