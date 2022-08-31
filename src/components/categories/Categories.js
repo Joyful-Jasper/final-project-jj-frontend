@@ -22,7 +22,7 @@ const Categories = () => {
 				{/* baru */}
 				{buttons &&
 					buttons.map((type, index) => (
-						<div key={index} class="btn-group" role="group" aria-label="Basic example">
+						<div key={index} className="btn-group" role="group" aria-label="Basic example">
 							<button type="button"
 								className="btn btn-secondary"
 								key={index}
@@ -40,7 +40,7 @@ const Categories = () => {
 									<img
 										src="https://media.suara.com/pictures/480x260/2020/04/18/15789-cara-membuat-website.jpg"
 										className="card-img-top"
-										width="200"
+
 										height="200"
 									/>
 									<div className="card-body">

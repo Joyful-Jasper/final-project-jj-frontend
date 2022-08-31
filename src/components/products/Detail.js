@@ -73,7 +73,7 @@ const Detail = () => {
               Lorem Ipsum.
             </p>
             <div>
-              <div className='justify-content-center'>
+              <div className='d-flex justify-content-around'>
                 <button type='button' class='btn btn-secondary'>
                   Secondary
                 </button>
