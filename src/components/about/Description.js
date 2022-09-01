@@ -3,7 +3,8 @@ import kAri from "../../assets/kakAri.jpeg";
 import kAshadi from "../../assets/kakAshadi.jpeg";
 import kBaharudin from "../../assets/kakBaharudin.jpeg";
 import ina from "../../assets/ina.jpeg";
-import foto from "../../assets/anime.jpg";
+import kAbrian from "../../assets/kakAbrian.jpeg";
+import kMirza from "../../assets/kakMirza.jpeg";
 
 const Description = () => {
   return (
@@ -20,25 +21,31 @@ const Description = () => {
       <div className="row justify-content-center my-5" style={{ backgroundColor: "#A7B5C0" }}>
         <h4 className="my-3 text-center"> Team Kami </h4>
         <div className="row text-center">
-          <div className="col my-5">
+          <div className="col mt-5">
             <img src={kAri} width="120" />
             <p>Arrie Bhaskara</p>
           </div>
-          <div className="col my-5">
+          <div className="col mt-5">
             <img src={kAshadi} width="120" />
             <p>Ashadi Putra</p>
           </div>
-          <div className="col my-5">
+          <div className="col mt-5">
             <img src={kBaharudin} width="120" />
             <p>Baharudin Fahrul</p>
           </div>
-          <div className="col my-5">
+        </div>
+        <div className="row text-center">
+          <div className="col ">
             <img src={ina} width="120" />
             <p>Ina Septiana</p>
           </div>
-          <div className="col my-5">
-            <img src={foto} width="75" />
+          <div className="col">
+            <img src={kAbrian} width="120" />
             <p>Abriansyah</p>
+          </div>
+          <div className="col">
+            <img src={kMirza} width="120" />
+            <p>Mirza</p>
           </div>
         </div>
       </div>
